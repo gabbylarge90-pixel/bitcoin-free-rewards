@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bitcoin Free Rewards</title>
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #101827;
+  color: #ffffff;
+}
+
+header {
+  background: #172235;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid #29364b;
+}
+
+.logo {
+  color: #f7931a;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+nav {
+  margin-top: 15px;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 14px;
+}
+
+.hero {
+  text-align: center;
+  padding: 45px 20px;
+}
+
+.hero h1 {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.hero span {
+  color: #f7931a;
+}
+
+.hero p {
+  color: #b8c2d3;
+  line-height: 1.6;
+}
+
+.card {
+  background: #1b283b;
+  border: 1px solid #2b3b53;
+  border-radius: 16px;
+  max-width: 420px;
+  margin: 20px auto;
+  padding: 25px;
+  text-align: center;
+}
+
+.card h2 {
+  margin-bottom: 15px;
+}
+
+.reward {
+  font-size: 32px;
+  color: #f7931a;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+input {
+  width: 100%;
+  padding: 14px;
+  margin: 10px 0;
+  border-radius: 9px;
+  border: 1px solid #34445c;
+  background: #101827;
+  color: white;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 9px;
+  background: #f7931a;
+  color: #111827;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #ffad42;
+}
+
+.notice {
+  font-size: 13px;
+  color: #9eacc0;
+  margin-top: 15px;
+  line-height: 1.5;
+}
+
+.features {
+  padding: 25px 20px;
+  text-align: center;
+}
+
+.feature {
+  background: #1b283b;
+  padding: 20px;
+  margin: 12px auto;
+  max-width: 420px;
+  border-radius: 12px;
+}
+
+.feature h3 {
+  color: #f7931a;
+  margin-bottom: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 25px;
+  color: #9eacc0;
+  font-size: 13px;
+  border-top: 1px solid #29364b;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">₿ Bitcoin Free Rewards</div>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#claim">Claim</a>
+    <a href="#rewards">Rewards</a>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <h1>Earn <span>Bitcoin</span> Rewards</h1>
+  <p>
+    Welcome to Bitcoin Free Rewards.<br>
+    Explore crypto rewards and daily earning opportunities.
+  </p>
+</section>
+
+<section class="card" id="claim">
+  <h2>🎁 Daily Bitcoin Claim</h2>
+
+  <p>Your reward</p>
+
+  <div class="reward">₿ Rewards</div>
+
+  <input
+    type="text"
+    id="username"
+    placeholder="Enter your FaucetPay username"
+  >
+
+  <button onclick="claimReward()">Claim Reward</button>
+
+  <p class="notice" id="message">
+    Rewards are not yet active.
+    This is a demonstration website.
+  </p>
+</section>
+
+<section class="features" id="rewards">
+
+  <div class="feature">
+    <h3>💰 Bitcoin Rewards</h3>
+    <p>Explore opportunities to earn cryptocurrency.</p>
+  </div>
+
+  <div class="feature">
+    <h3>⏰ Daily Claims</h3>
+    <p>Return to discover future reward opportunities.</p>
+  </div>
+
+  <div class="feature">
+    <h3>👥 Referral Program</h3>
+    <p>Referral rewards may be introduced in the future.</p>
+  </div>
+
+</section>
+
+<footer>
+  <p>Bitcoin Free Rewards</p>
+  <p>Rewards are not guaranteed. Terms apply.</p>
+</footer>
+
+<script>
+function claimReward() {
+  const username = document.getElementById("username").value.trim();
+  const message = document.getElementById("message");
+
+  if (!username) {
+    message.innerText = "Please enter your FaucetPay username.";
+    return;
+  }
+
+  message.innerText =
+    "Welcome! The faucet is currently in development. " +
+    "Real claims and payouts are not active yet.";
+}
+</script>
+
+</body>
+</html>
